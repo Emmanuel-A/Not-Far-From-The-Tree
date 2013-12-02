@@ -1,0 +1,188 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+  width: 65%;
+}
+.asterisk {
+  color: #ed1b24;
+}
+nav {
+  margin: 30px 0 0 0;
+  padding: 20px 0 0 0;
+  border-bottom: 2px solid #ed1b24;
+}
+nav #logo {
+  display: block;
+  background: url(../assets/logo.jpg) no-repeat;
+  text-indent: -9999px;
+  background-size: 104px;
+  height: 65px;
+  width: 102px;
+  margin: -31px 0 0 0;
+  float: left;
+}
+nav ul li {
+  margin: 0 20px 0 20px;
+  list-style-type: none;
+  display: inline-block;
+  padding: 8px 0px;
+}
+nav ul li a {
+  font-size: 0.9em;
+  font-family: 'Oxygen', sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+nav ul li:hover {
+  background-color: #ed1b24;
+  color: #fff;
+  padding: 5px;
+}
+nav ul li:active {
+  color: #ed1b24;
+}
+nav ul li ul {
+  margin: 3px 0 0 -25px;
+  padding: 0;
+  position: absolute;
+  width: 150px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+}
+nav ul li ul li {
+  width: 150px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 0.9em;
+  text-align: left;
+  padding: 6px;
+  background: #ed1b24;
+  border-top: 1px solid #fff;
+  display: block;
+  color: #000;
+}
+nav ul li ul li:hover {
+  background: #666;
+}
+nav ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+nav #donate-btn {
+  background-color: gray;
+  width: 100px;
+  text-indent: -9999px;
+  background: url(../assets/donate-btn.png) no-repeat;
+  background-size: 75px;
+  height: 100px;
+  width: 80px;
+  float: right;
+  margin: -64px 14px 0 0;
+}
+nav #donate-btn:hover {
+  background-size: 80px;
+  cursor: pointer;
+}
+#volunteerInfo {
+  padding: 20px 0;
+}
+#volunteerInfo h1 {
+  font-size: 1.4em;
+  padding: 0 0 5px 0;
+}
+p {
+  font-size: 1em;
+  padding: 0 0 5px 0;
+  line-height: 16px;
+}
+p#note {
+  font-size: 0.9em;
+}
+#volunteer-form {
+  padding: 20px;
+  background: url(../assets/texture-background.png);
+  /*	width: 65%;
+*/
+  margin: 0 auto;
+}
+form {
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8em;
+}
+form input {
+  /*		margin: 0 0 10px 0;
+*/
+}
+form input#phone_01 {
+  text-align: center;
+  width: 50px;
+  height: 23px;
+}
+form input#phone_02 {
+  text-align: center;
+  width: 50px;
+  height: 23px;
+}
+form input#phone_03 {
+  text-align: center;
+  width: 60px;
+  height: 23px;
+  padding: 0 0 0 20px;
+}
+form input#extension {
+  text-align: center;
+  width: 60px;
+  height: 23px;
+  margin: 0 0 0 4px;
+}
+form input#firstName {
+  height: 23px;
+  margin: 0 0 0 4px;
+}
+form input#lastName {
+  height: 23px;
+  margin: 0 0 0 4px;
+}
+form input#email {
+  height: 23px;
+}
+form input#streetName {
+  height: 23px;
+}
+form input#city {
+  height: 23px;
+  margin: 0 0 0 4px;
+}
+form input#province {
+  height: 23px;
+  margin: 0 0 0 4px;
+}
+form input#postalcode {
+  height: 23px;
+  margin: 0 0 0 4px;
+}
+form select {
+  width: 137px;
+}
+form label#last {
+  margin: 0 0px 0 20px;
+}
+form label#extensionLbl {
+  margin: 0 0px 0 20px;
+}
+form label#provinceLbl {
+  margin: 0 0px 0 20px;
+}
+form label#countryLbl {
+  margin: 0 0px 0 20px;
+}

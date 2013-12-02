@@ -1,0 +1,195 @@
+@import 'includes/brands.less';
+@import 'includes/mixins.less';
+
+*{
+	.box-sizing();
+}
+.wrapper{
+	margin: 0 auto;
+	background-color: #fff;
+	width: 65%;
+}
+.asterisk{
+	color: @red;
+}
+nav{
+	margin: 30px 0 0 0;
+	padding: 20px 0 0 0;
+	border-bottom: 2px solid @red;
+	#logo{
+		display: block;
+  		background:url(../assets/logo.jpg) no-repeat;
+  		text-indent: -9999px;
+  		background-size: 104px;
+		height: 65px;
+		width: 102px;
+		margin: -31px 0 0 0;
+		float: left;		
+	}
+	ul{
+		 li{
+		 	margin: 0 20px 0 20px;
+			list-style-type: none;
+			display: inline-block;
+			padding: 8px 0px;
+			a{
+				font-size: 0.9em;
+				font-family: @headingFontFamily;
+				text-decoration: none;
+				color: #000;
+				
+			}&:hover{
+					background-color:@red;
+					color: #fff;
+					padding: 5px;
+				}
+				&:active{
+					color: @red;
+				}
+			}
+			li ul {
+				margin: 3px 0 0 -25px;
+				padding: 0;
+				position: absolute;
+				width: 150px;
+				box-shadow: none;
+				display: none;
+				opacity: 0;
+				visibility: hidden;
+				-webkit-transiton: opacity 0.2s;
+				-moz-transition: opacity 0.2s;
+			}
+			li ul li  { 
+				width: 150px;
+				font-family: @headingFontFamily;
+				font-size: 0.9em;
+				text-align: left;
+				padding: 6px;
+			    background: @red; 
+				border-top: 1px solid #fff;
+				display: block; 
+				color: #000;
+				&:hover{
+					background: #666; 
+				}
+			}
+			li:hover ul {
+				display: block;
+				opacity: 1;
+				visibility: visible;
+				cursor: pointer;
+			}
+		}
+		#donate-btn{ 
+				background-color: gray;
+				width: 100px;
+				float: right;
+				text-indent: -9999px;
+				background: url(../assets/donate-btn.png) no-repeat;
+				background-size: 75px;
+				height: 100px;
+				width: 80px;
+				float: right;
+				margin: -64px 14px 0 0;
+			&:hover{
+				background-size:80px;				
+				cursor: pointer;
+			}
+		}
+	}
+	
+
+#volunteerInfo{
+	padding: 20px 0;
+		h1{
+			font-size: @headingFontSizeDesk;
+			padding: 0 0 5px 0;
+		}
+	}
+	p{
+		font-size: @bodyFontSizeDesk;
+		padding: 0 0 5px 0;
+		line-height: 16px;
+	&#note{
+		font-size: 0.9em;
+	}
+}
+
+#volunteer-form{
+	padding: 20px;
+	background: url(../assets/texture-background.png);
+/*	width: 65%;
+*/	margin: 0 auto;
+}
+form{
+	font-family: @bodyFontFamily;
+	font-size: @formFontSizeDesk;
+	input{
+/*		margin: 0 0 10px 0;
+*/		&#phone_01{
+			text-align: center;
+			width: 50px;
+			height:23px;
+		}
+		&#phone_02{
+			text-align: center;	
+			width: 50px;
+			height:23px;
+		}
+		&#phone_03{
+			text-align: center;		
+			width: 60px;
+			height:23px;
+			padding: 0 0 0 20px;
+		}
+		&#extension{
+			text-align: center;		
+			width: 60px;
+			height:23px;
+			margin: 0 0 0 4px;
+		}
+		&#firstName{
+			height:23px;
+			margin: 0 0 0 4px;
+		}
+		&#lastName{
+			height:23px;
+			margin: 0 0 0 4px;			
+		}
+		&#email{
+			height: 23px;		
+		}
+		&#streetName{
+			height: 23px;
+		}
+		&#city{
+			height: 23px;
+			margin: 0 0 0 4px;
+		}
+		&#province{
+			height: 23px;
+			margin: 0 0 0 4px;			
+		}
+		&#postalcode{
+			height: 23px;
+			margin: 0 0 0 4px;			
+		}
+	}
+	select{
+		width: 137px;
+	}
+	label{
+		&#last{
+			margin: 0 0px 0 20px;
+		}
+		&#extensionLbl{
+			margin: 0 0px 0 20px;
+		}
+		&#provinceLbl{
+			margin: 0 0px 0 20px;
+		}
+		&#countryLbl{
+			margin: 0 0px 0 20px;
+		}
+	}
+}
