@@ -3,11 +3,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.wrapper {
-  margin: 0 auto;
-  background-color: #fff;
-  width: 65%;
-}
+/*.wrapper{
+	margin: 0 auto;
+	background-color: #fff;
+	width: 65%;
+}*/
 .asterisk {
   color: #ed1b24;
 }
