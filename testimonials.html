@@ -25,8 +25,8 @@
 		});
 	</script>
 	<script>
-	  $(document).ready(function(){
-	    $("#navBar").click(function(){
+ 		$(document).ready(function(){
+	    $(".menubutton").click(function(){
 	    $("nav").slideToggle();
 	    });
 	  });
@@ -34,7 +34,10 @@
 
 	</head>
 	<body>
-	<div class="wrapper">
+	<div class="wrapper">	
+	<header>	
+		<div class="menubutton"><img src="assets/menu.svg"></div>
+		<p><a href="" id="donate-btn">Donate now</a></p>
 		<nav>
 			<p><a href="index.html" id="logo">NotFarFromTheTree</a></p>
 			<ul>
@@ -64,8 +67,8 @@
 				</li>
 				<li><a href="testimonials.html">Testimonials</a></li>
 			</ul>
-			<p><a href="donate.html" id="donate-btn">Donate now</a></p>
 		</nav>
+	</header>	
 		<section id="testimonials">
 			<div id="testimonial-one">
 				<h1>Peter Peaker</h1>

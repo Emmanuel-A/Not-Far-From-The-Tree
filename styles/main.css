@@ -30,9 +30,16 @@ h2 {
   font-size: 1em;
 }
 /******************************** HEADER/NAV STYLES ******************************/
-#banner {
+header .menubutton {
+  display: none;
+  height: 42px;
+  width: 42px;
+  margin: 88px 0px 0px 124px;
   position: absolute;
-  margin: 0 0 0 -130px;
+}
+header #banner {
+  position: absolute;
+  margin: 26px 0 0 0px;
   width: 65%;
 }
 header #logo {
@@ -53,14 +60,14 @@ header #donate-btn {
   background-size: 75px;
   height: 100px;
   width: 80px;
-  margin: 0px 5px 0 0;
+  margin: 26px 5px 0 0;
 }
 header #donate-btn:hover {
   background-size: 80px;
   cursor: pointer;
 }
 nav {
-  margin: -5px 0 0 0;
+  margin: -10px 0 0 0;
 }
 nav ul li a:hover,
 nav a:active {
@@ -71,10 +78,9 @@ nav ul {
   top: 0;
 }
 nav ul li {
-  margin: 0 20px 0 20px;
   list-style-type: none;
   display: inline-block;
-  padding: 5px 0px;
+  padding: 5px 22px;
 }
 nav ul li a {
   font-size: 0.8em;
@@ -116,6 +122,7 @@ nav ul li:hover ul {
 }
 /******************************** HOME PAGE STYLES ******************************/
 section#home-page {
+  height: 100px;
   padding: 30px;
 }
 section#home-page p {
@@ -265,7 +272,7 @@ section#upcoming-events #event-two {
 }
 section#upcoming-events #event-three {
   padding: 40px;
-  height: 400px;
+  height: 100px;
 }
 /******************************** VOLUNTEER PAGE STYLES ******************************/
 #volunteerInfo {
@@ -274,8 +281,8 @@ section#upcoming-events #event-three {
   margin: 100px 0 0 0;
 }
 #volunteerInfo img {
-  width: 66%;
-  margin: 0 0 0 133px;
+  width: 50%;
+  margin: 0 0 0 185px;
   padding: 20px 0 33px 0;
 }
 #volunteerInfo h1 {
@@ -432,7 +439,7 @@ form h1#address {
 }
 /******************************** FOOTER STYLES ******************************/
 footer {
-  padding: 100px 0 0 0;
+  padding: 200px 0 0 0;
   clear: both;
   font-family: Helvetica, arial;
   font-size: 0.8em;
@@ -484,6 +491,16 @@ footer #address p#copyright {
   .wrapper {
     max-width: 100%;
   }
+  header #donate-btn {
+    margin: 0 55px 0 0px;
+    width: 90px;
+    height: 110px;
+    background-size: 83px;
+  }
+  header #banner {
+    width: 100%;
+    margin: 0;
+  }
   nav #home-logo {
     visibility: visible;
   }
@@ -502,16 +519,6 @@ footer #address p#copyright {
   nav ul li a {
     text-align: center;
     font-size: 1.3em;
-  }
-  nav #donate-btn {
-    margin: -141px 55px 0 0;
-    width: 90px;
-    height: 110px;
-    background-size: 83px;
-  }
-  nav #banner {
-    width: 100%;
-    margin: 0;
   }
   section#home-page {
     margin: 35px 0 0 0;
@@ -591,38 +598,72 @@ footer #address p#copyright {
     border: none;
     margin: 0;
   }
-  footer #address {
-    padding: 15px 34px 0 34px;
-  }
-  footer #address p {
-    font-size: 1.2em;
-  }
-  footer #footer-nav ul li a {
-    font-size: 1.2em;
-    padding: 5px;
-  }
-  footer #footer-nav p {
-    font-size: 1em;
-  }
-  footer #footer-nav #social-media ul {
-    padding: 0 10px;
-    margin: -38px 30px 0 67px;
-  }
-  footer #footer-nav #social-media ul img {
-    width: 45px;
-    margin: 0 0 0 -16px;
-  }
+  /*footer{
+  		#address{
+  			padding: 15px 34px 0 34px;
+  			p{
+  				font-size: 1.2em;
+  			}
+  		}
+  		#footer-nav{
+  			ul{
+  				li a{
+  					font-size:1.2em;
+  					padding: 5px;
+  				}
+  			}
+  			p{
+  				font-size: 1em;
+  			}
+  			#social-media{
+  				ul{
+  					padding: 0 10px;
+  					margin: -38px 30px 0 67px;
+  					img{
+  						width: 45px;
+  						margin: 0 0 0 -16px;
+  					}
+  				}
+  			}
+  		}
+  	}*/
 }
 /*Phone Media Query*/
 @media only screen and (max-width: 600px) and (min-width: 320px) {
   .wrapper {
     margin: 0 auto;
   }
-  nav ul li a {
+  header #donate-btn {
+    margin: 0;
+    background-size: 60px;
+  }
+  header #banner {
+    margin: 0;
     width: 100%;
   }
-  nav ul li a:hover {
+  header .menubutton {
+    display: block;
+    margin: 46px 0px 0px 143px;
+  }
+  nav #logo {
+    margin: 10px 0px 0 4px;
+  }
+  nav ul {
+    margin: 79px 0 0 0;
+    width: 100%;
+  }
+  nav ul li {
+    border-top: 2px solid #fff;
+    width: 100%;
+  }
+  nav ul li:hover {
     cursor: none;
+  }
+  nav ul li ul li {
+    text-align: center;
+    width: 100%;
+    margin: 0 0px 0 60px;
+    display: block;
   }
   #testimonials #testimonial-one,
   #testimonials #testimonial-two {
@@ -660,6 +701,9 @@ footer #address p#copyright {
     display: none;
     visibility: hidden;
   }
+  section#home-page #welcome-message {
+    margin: 140px 0 5px 0;
+  }
   section#upcoming-events h1 {
     text-align: center;
     margin: 0 0 0 -55px;
@@ -685,19 +729,23 @@ footer #address p#copyright {
     margin: 0 0 0 0px;
   }
 }
-footer #address,
-footer #links {
-  display: none;
+/*
+footer{
+	#address, #links{
+		visibility: hidden;
+	}
+	#footer-nav{
+		height: 110px;
+		#social-media{
+			p{
+				display: none;
+			}
+		}
+	}
 }
-footer #footer-nav {
-  height: 100px;
+footer #footer-nav #social-media ul{
+	margin: 12px 30px 0 0;
 }
-footer #footer-nav #social-media p {
-  display: none;
-}
-footer #footer-nav #social-media ul {
-  margin: 12px 30px 0 0;
-}
-footer #footer-nav #social-media ul img {
-  width: 50px;
-}
+footer #footer-nav #social-media ul img{
+	width: 50px;
+}*/

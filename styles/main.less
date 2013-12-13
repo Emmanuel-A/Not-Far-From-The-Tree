@@ -28,12 +28,19 @@ h1, h2{
 	font-size: @headingFontSizeDesk;
 }
 /******************************** HEADER/NAV STYLES ******************************/
-#banner{
-	position: absolute;
-	margin:0 0 0 -130px;
-	width: 65%;	
-}
 header{
+	.menubutton{
+		display: none;
+		height: 42px;
+		width: 42px;
+		margin: 88px 0px 0px 124px;
+		position: absolute;
+	}
+	#banner{
+		position: absolute;
+		margin:26px 0 0 0px;
+		width: 65%;	
+	}
 	#logo{
 		display: block;
   		background:url(../assets/logo.jpg) no-repeat;
@@ -52,7 +59,7 @@ header{
 		background-size: 75px;
 		height: 100px;
 		width: 80px;
-		margin: 0px 5px 0 0;
+		margin: 26px 5px 0 0;
 	&:hover{
 		background-size:80px;				
 		cursor: pointer;
@@ -60,7 +67,7 @@ header{
 	}
 }
 nav{
-	margin: -5px 0 0 0;
+	margin: -10px 0 0 0;
 	ul li a:hover, a:active{
 		color: #fff;
 	}
@@ -68,10 +75,9 @@ nav{
 		background-color: @red;
 		top: 0;
 		 li{
-		 	margin: 0 20px 0 20px;
 			list-style-type: none;
 			display: inline-block;
-			padding: 5px 0px;
+			padding: 5px 22px;
 			a{
 				font-size: @formFontSizeDesk;
 				font-family: @headingFontFamily;
@@ -116,6 +122,7 @@ nav{
 
 /******************************** HOME PAGE STYLES ******************************/
 section#home-page{
+	height: 100px;
 	padding: 30px;
 	p{
 		clear: both;
@@ -267,15 +274,15 @@ section#upcoming-events{
 	}
 	#event-three{	
 		padding:40px; 
-		height: 400px;
+		height: 100px;
 	}
 }		
 
 /******************************** VOLUNTEER PAGE STYLES ******************************/
 #volunteerInfo{
 	img{
-		width: 66%;
-		margin: 0 0 0 133px;
+		width: 50%;
+		margin: 0 0 0 185px;
 		padding: 20px 0 33px 0;
 	}
 	border-top: 2px solid @red;
@@ -435,7 +442,7 @@ form{
 }
 /******************************** FOOTER STYLES ******************************/
 footer{	
-	padding: 100px 0 0 0;
+	padding: 200px 0 0 0;
 	clear: both;
 	font-family: Helvetica, arial;
 	font-size: @formFontSizeDesk;
@@ -490,6 +497,18 @@ footer{
 	.wrapper{
 		max-width: 100%;
 	}
+	header{
+			#donate-btn{
+			margin: 0 55px 0 0px;
+			width: 90px;
+			height: 110px;
+			background-size: 83px;
+		}
+		#banner{
+			width: 100%;
+			margin: 0;
+		}
+	}
 	nav{
 		#home-logo{
 			visibility: visible;
@@ -509,16 +528,6 @@ footer{
 				text-align: center;
 				font-size: 1.3em;
 			}
-		}
-		#donate-btn{
-			margin: -141px 55px 0 0;
-			width: 90px;
-			height: 110px;
-			background-size: 83px;
-		}
-		#banner{
-			width: 100%;
-			margin: 0;
 		}
 	}
 	section{
@@ -595,7 +604,7 @@ footer{
 		border: none;
 		margin: 0;
 	}
-	footer{
+	/*footer{
 		#address{
 			padding: 15px 34px 0 34px;
 			p{
@@ -623,7 +632,7 @@ footer{
 				}
 			}
 		}
-	}
+	}*/
 }
 
 /*Phone Media Query*/
@@ -631,16 +640,43 @@ footer{
 	.wrapper{
 		margin: 0 auto;
 	}
+	header{
+		#donate-btn{
+			margin: 0;
+			background-size: 60px;
+		}
+		#banner{
+			margin: 0;
+			width: 100%;
+		}
+		.menubutton{
+			display: block;
+			margin: 46px 0px 0px 143px;
+		}
+	}
 	nav{
-    ul {	
-	    li a{
-	    width: 100%;
+		#logo{
+			margin: 10px 0px 0 4px;
+		}
+    ul {
+    	margin: 79px 0 0 0;
+    	width: 100%;	
+	    li {
+	    	border-top: 2px solid #fff;
+	    	width: 100%;
 	    &:hover{
 	      cursor:none;
+        }
+        ul li{
+        	text-align: center;
+        	width: 100%;
+        	margin: 0 0px 0 60px;
+        	display: block;
         }
       }
     }
   }
+
 
 	#testimonials{
 		#testimonial-one, #testimonial-two{
@@ -683,6 +719,10 @@ footer{
 					}
 				}
 			} 
+			#welcome-message{
+				margin:140px 0 5px 0;
+			}
+
 		}
 		&#upcoming-events{
 			h1{
@@ -713,12 +753,13 @@ footer{
 		}
 	}
 }
+/*
 footer{
 	#address, #links{
-		display: none;
+		visibility: hidden;
 	}
 	#footer-nav{
-		height: 100px;
+		height: 110px;
 		#social-media{
 			p{
 				display: none;
@@ -731,4 +772,4 @@ footer #footer-nav #social-media ul{
 }
 footer #footer-nav #social-media ul img{
 	width: 50px;
-}
+}*/
