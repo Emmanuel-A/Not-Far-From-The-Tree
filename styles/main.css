@@ -3,48 +3,84 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/*.wrapper{
-	margin: 0 auto;
-	background-color: #fff;
-	width: 65%;
-}*/
+body {
+  /*	background-image: url(../assets/black-paper.jpg);
+*/
+
+  background-color: black;
+}
+.wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+  max-width: 65%;
+  height: 100%;
+}
 .asterisk {
   color: #ed1b24;
 }
-nav {
-  margin: 30px 0 0 0;
-  padding: 20px 0 0 0;
-  border-bottom: 2px solid #ed1b24;
+p {
+  font-size: 0.9em;
+  /*	font-weight: lighter;
+*/
+  font-family: 'Oxygen', sans-serif;
 }
-nav #logo {
+h1,
+h2 {
+  font-family: Times, serif;
+  font-size: 1em;
+}
+/******************************** HEADER/NAV STYLES ******************************/
+#banner {
+  position: absolute;
+  margin: 0 0 0 -130px;
+  width: 65%;
+}
+header #logo {
   display: block;
   background: url(../assets/logo.jpg) no-repeat;
   text-indent: -9999px;
-  background-size: 104px;
-  height: 65px;
-  width: 102px;
-  margin: -31px 0 0 0;
+  background-size: 120px;
+  height: 70px;
+  width: 120px;
+  margin: 55px 0px 0 10px;
   float: left;
+}
+header #donate-btn {
+  position: relative;
+  float: right;
+  text-indent: -9999px;
+  background: url(../assets/donate-btn.png) no-repeat;
+  background-size: 75px;
+  height: 100px;
+  width: 80px;
+  margin: 0px 5px 0 0;
+}
+header #donate-btn:hover {
+  background-size: 80px;
+  cursor: pointer;
+}
+nav {
+  margin: -5px 0 0 0;
+}
+nav ul li a:hover,
+nav a:active {
+  color: #fff;
+}
+nav ul {
+  background-color: #ed1b24;
+  top: 0;
 }
 nav ul li {
   margin: 0 20px 0 20px;
   list-style-type: none;
   display: inline-block;
-  padding: 8px 0px;
+  padding: 5px 0px;
 }
 nav ul li a {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family: 'Oxygen', sans-serif;
   text-decoration: none;
   color: #000;
-}
-nav ul li:hover {
-  background-color: #ed1b24;
-  color: #fff;
-  padding: 5px;
-}
-nav ul li:active {
-  color: #ed1b24;
 }
 nav ul li ul {
   margin: 3px 0 0 -25px;
@@ -55,11 +91,10 @@ nav ul li ul {
   display: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
+  z-index: 1;
 }
 nav ul li ul li {
-  width: 150px;
+  margin: 0 0px 0 -5px;
   font-family: 'Oxygen', sans-serif;
   font-size: 0.9em;
   text-align: left;
@@ -73,53 +108,222 @@ nav ul li ul li:hover {
   background: #666;
 }
 nav ul li:hover ul {
+  margin: 26px 0 0 0;
   display: block;
   opacity: 1;
   visibility: visible;
   cursor: pointer;
 }
-nav #donate-btn {
-  background-color: gray;
-  width: 100px;
-  text-indent: -9999px;
-  background: url(../assets/donate-btn.png) no-repeat;
-  background-size: 75px;
-  height: 100px;
-  width: 80px;
-  float: right;
-  margin: -64px 14px 0 0;
+/******************************** HOME PAGE STYLES ******************************/
+section#home-page {
+  padding: 30px;
 }
-nav #donate-btn:hover {
-  background-size: 80px;
-  cursor: pointer;
+section#home-page p {
+  clear: both;
 }
+section#home-page p#cta {
+  padding: 30px 0 30px 0;
+}
+section#home-page p#ctaButton a {
+  border-radius: 20px;
+  color: #000;
+  font-family: Times, serif;
+  font-size: headingFontSizeDesk;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 25px 63px 0 0px;
+  background-color: #f1c40f;
+  padding: 10px;
+}
+section#home-page p#ctaButton a:hover {
+  background-color: #CEA503;
+  color: #660101;
+}
+section#home-page #welcome-message {
+  margin: 220px 0 5px 0;
+}
+section#home-page #welcome-message p {
+  padding: 0 0 10px 0;
+  line-height: 24px;
+}
+section#home-page h1 {
+  font-size: 1.1em;
+  text-align: center;
+  margin: 30px 0 10px 0px;
+}
+section#home-page #pounds-picked {
+  margin: 0 0 0 50px;
+}
+section#home-page #pounds-picked .tiles {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  margin: 10px 20px ;
+  padding: 0 0 30px 0;
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+section#home-page #pounds-picked .tiles .card {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+section#home-page #pounds-picked .tiles a {
+  text-decoration: none;
+}
+section#home-page #pounds-picked .tiles p {
+  color: #000;
+  padding: 3px 0 0 0;
+  line-height: normal;
+}
+section#home-page #pounds-picked .tiles h2 {
+  font-size: 1em;
+  color: #000;
+  text-transform: uppercase;
+  background-color: #f1c40f;
+  padding: 5px;
+  margin: 0px 0 40px 0px;
+}
+section#home-page #pounds-picked .tiles .red-text {
+  font-style: italic;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 2em;
+  color: #ed1b24;
+}
+section#home-page #pounds-picked .tiles .front {
+  z-index: 1;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  background-color: #ecf0f1;
+}
+section#home-page #pounds-picked .tiles .back {
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  background-color: #ecf0f1;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+section#home-page #pounds-picked .tiles .back p.firstLine {
+  margin: -30px 0 0 0;
+}
+.rotate-3d {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/******************************** EVENTS PAGE STYLES ******************************/
+.fotorama {
+  border-top: 2px solid #ed1b24;
+  padding: 20px 0 0 0;
+}
+section#upcoming-events h1 {
+  padding: 20px 0px 0 40px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+}
+section#upcoming-events h2 {
+  padding: 0px 0 13px 0;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+section#upcoming-events h3 {
+  padding: 3px 0 0 0;
+  right: 0;
+  font-family: 'Oxygen', sans-serif;
+}
+section#upcoming-events p {
+  font-weight: lighter;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 0.9em;
+}
+section#upcoming-events p .date {
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+section#upcoming-events img {
+  float: left;
+  width: 200px;
+  padding: 0 20px 30px 0;
+}
+section#upcoming-events #event-one {
+  padding: 25px 0 60px 40px;
+  border-bottom: 1px solid #ccc;
+}
+section#upcoming-events #event-two {
+  padding: 25px 0 60px 40px;
+  border-bottom: 2px solid #ed1b24;
+}
+section#upcoming-events #event-three {
+  padding: 40px;
+  height: 400px;
+}
+/******************************** VOLUNTEER PAGE STYLES ******************************/
 #volunteerInfo {
-  padding: 20px 0;
+  border-top: 2px solid #ed1b24;
+  padding: 20px 41px 20px 31px;
+  margin: 100px 0 0 0;
+}
+#volunteerInfo img {
+  width: 66%;
+  margin: 0 0 0 133px;
+  padding: 20px 0 33px 0;
 }
 #volunteerInfo h1 {
-  font-size: 1.4em;
-  padding: 0 0 5px 0;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 20px 0 5px 0;
 }
 p {
-  font-size: 1em;
+  font-size: 0.9em;
   padding: 0 0 5px 0;
-  line-height: 16px;
+  line-height: 22px;
 }
 p#note {
   font-size: 0.9em;
+  font-weight: lighter;
+  width: 425px;
 }
 #volunteer-form {
   padding: 20px;
+  /*	background-color: @clouds;
+*/
   background: url(../assets/texture-background.png);
   /*	width: 65%;
 */
   margin: 0 auto;
 }
+.hidden {
+  display: none;
+}
 form {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 0.8em;
 }
+form #submit {
+  box-shadow: 0 1px 5px #000;
+  color: #000;
+  background-color: #f1c40f;
+  border-radius: 30px;
+  width: 100px;
+  border: none;
+  font-size: 1.2em;
+}
+form #submit:hover {
+  cursor: pointer;
+  background-color: #CEA503;
+}
 form input {
+  font-size: 1em;
   /*		margin: 0 0 10px 0;
 */
 }
@@ -146,43 +350,354 @@ form input#extension {
   margin: 0 0 0 4px;
 }
 form input#firstName {
+  width: 180px;
   height: 23px;
-  margin: 0 0 0 4px;
 }
 form input#lastName {
+  width: 180px;
   height: 23px;
-  margin: 0 0 0 4px;
 }
 form input#email {
+  width: 180px;
   height: 23px;
 }
 form input#streetName {
+  width: 180px;
   height: 23px;
 }
 form input#city {
+  width: 180px;
   height: 23px;
-  margin: 0 0 0 4px;
 }
 form input#province {
+  width: 180px;
   height: 23px;
-  margin: 0 0 0 4px;
 }
 form input#postalcode {
+  width: 180px;
   height: 23px;
-  margin: 0 0 0 4px;
+}
+form #extensionLbl {
+  padding: 0 0 0 30px;
 }
 form select {
-  width: 137px;
+  width: 180px;
+  height: 23px;
 }
-form label#last {
-  margin: 0 0px 0 20px;
+form p {
+  padding: 10px 0 5px 1px;
+  font-size: 1.1em;
 }
-form label#extensionLbl {
-  margin: 0 0px 0 20px;
+form h1 {
+  font-size: 1.2em;
+  font-family: 'Oxygen', sans-serif;
 }
-form label#provinceLbl {
-  margin: 0 0px 0 20px;
+form h1#form-title {
+  text-align: center;
+  padding: 0 0 10px 0;
 }
-form label#countryLbl {
-  margin: 0 0px 0 20px;
+form h1#address {
+  margin: 30px 0 0 0;
+}
+.hide {
+  display: none;
+}
+#testimonials {
+  border-top: 2px solid #ed1b24;
+  margin: 100px 0 0 0;
+}
+#testimonials h1 {
+  color: green;
+  margin: 0 33px;
+  padding: 0 0 11px 0;
+  font-size: 1.8em;
+}
+#testimonials #smith {
+  margin: 0 97px;
+}
+#testimonials img {
+  float: left;
+  padding: 0 15px;
+}
+#testimonials p {
+  padding: 0 0px 0 15px;
+  line-height: 2em;
+}
+#testimonials #testimonial-one {
+  padding: 40px;
+}
+#testimonials #testimonial-two {
+  padding: 40px;
+  background-color: #ecf0f1;
+}
+/******************************** FOOTER STYLES ******************************/
+footer {
+  padding: 100px 0 0 0;
+  clear: both;
+  font-family: Helvetica, arial;
+  font-size: 0.8em;
+}
+footer #footer-nav {
+  padding: 11px 0 10px 31px;
+  background-color: #ed1b24;
+}
+footer #footer-nav ul li {
+  display: inline-block;
+}
+footer #footer-nav ul li a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #fff;
+}
+footer #footer-nav ul li a:hover {
+  color: #000;
+}
+footer #footer-nav #social-media {
+  float: right;
+}
+footer #footer-nav #social-media ul {
+  margin: -31px 0 0 67px;
+}
+footer #footer-nav #social-media ul img {
+  width: 34px;
+  margin: 0 0 0 -10px;
+}
+footer #footer-nav p {
+  font-style: italic;
+  margin: -14px 0 0 0;
+  padding: 0 200px 0 0;
+  font-size: 0.8em;
+  color: #fff;
+}
+footer #address {
+  padding: 15px 0 0 10px;
+}
+footer #address p#copyright {
+  float: right;
+  margin: -26px 10px 0 0;
+}
+/*Tablet Media Query*/
+@media only screen and (max-width: 1024px) {
+  p {
+    font-size: 1em;
+  }
+  .wrapper {
+    max-width: 100%;
+  }
+  nav #home-logo {
+    visibility: visible;
+  }
+  nav #logo {
+    margin: 21px 0px 0 55px;
+  }
+  nav ul li ul {
+    position: static;
+    z-index: 2;
+    text-align: center;
+  }
+  nav ul {
+    text-align: center;
+    margin: 105px 0 0 0;
+  }
+  nav ul li a {
+    text-align: center;
+    font-size: 1.3em;
+  }
+  nav #donate-btn {
+    margin: -141px 55px 0 0;
+    width: 90px;
+    height: 110px;
+    background-size: 83px;
+  }
+  nav #banner {
+    width: 100%;
+    margin: 0;
+  }
+  section#home-page {
+    margin: 35px 0 0 0;
+  }
+  section#home-page #pounds-picked {
+    margin: 0 0 0 14%;
+  }
+  section#home-page h1 {
+    font-size: 1.5em;
+  }
+  section#home-page #pounds-picked .tiles {
+    height: 260px;
+  }
+  section#home-page #pounds-picked .tiles .front {
+    height: 230px;
+  }
+  section#home-page #pounds-picked .tiles .back {
+    height: 246px;
+  }
+  section#upcoming-events img {
+    width: 240px;
+  }
+  section#upcoming-events p .date {
+    font-size: 1em;
+  }
+  section#upcoming-events h1 {
+    font-size: 1.1em;
+  }
+  section#upcoming-events h2 {
+    font-size: 1.1em;
+  }
+  #gallery {
+    margin: -125px 0 0 0;
+  }
+  .fotorama {
+    border: none;
+  }
+  #volunteer-form {
+    text-align: center;
+  }
+  #volunteer-form input {
+    margin: 0 5px 10px 10px;
+  }
+  #volunteer-form input#province,
+  #volunteer-form input#firstName,
+  #volunteer-form input#lastName,
+  #volunteer-form input#streetName,
+  #volunteer-form input#city,
+  #volunteer-form input#postalcode,
+  #volunteer-form input#email,
+  #volunteer-form input#submit,
+  #volunteer-form select {
+    width: 250px;
+    height: 30px;
+  }
+  #volunteer-form input#phone_01,
+  #volunteer-form input#phone_02,
+  #volunteer-form input#phone_03,
+  #volunteer-form input#extension {
+    height: 30px;
+  }
+  #volunteer-form input#radio,
+  #volunteer-form input#checkbox {
+    font-size: 2em;
+  }
+  #volunteer-form h1#form-title {
+    padding: 0 0 40px 0;
+  }
+  #volunteerInfo {
+    border: none;
+    margin: 0px;
+  }
+  #volunteerInfo h1 {
+    font-size: 1.1em;
+  }
+  #testimonials {
+    border: none;
+    margin: 0;
+  }
+  footer #address {
+    padding: 15px 34px 0 34px;
+  }
+  footer #address p {
+    font-size: 1.2em;
+  }
+  footer #footer-nav ul li a {
+    font-size: 1.2em;
+    padding: 5px;
+  }
+  footer #footer-nav p {
+    font-size: 1em;
+  }
+  footer #footer-nav #social-media ul {
+    padding: 0 10px;
+    margin: -38px 30px 0 67px;
+  }
+  footer #footer-nav #social-media ul img {
+    width: 45px;
+    margin: 0 0 0 -16px;
+  }
+}
+/*Phone Media Query*/
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+  nav ul li a {
+    width: 100%;
+  }
+  nav ul li a:hover {
+    cursor: none;
+  }
+  #testimonials #testimonial-one,
+  #testimonials #testimonial-two {
+    padding: 20px 20px 0 20px;
+  }
+  #testimonials #smith {
+    margin: 0 60px;
+  }
+  #testimonials img {
+    width: 100%;
+    padding: 0 15px 16px 15px;
+  }
+  #testimonials p {
+    font-size: 0.8em;
+    line-height: 1.9em;
+    padding: 0;
+  }
+  section#home-page {
+    margin: -120px 0 0 0;
+    padding: 0 13px 0 15px;
+  }
+  section#home-page h1 {
+    font-size: 1.1em;
+    width: 61%;
+    margin: 0 auto;
+  }
+  section#home-page p#ctaButton a {
+    text-align: center;
+  }
+  section#home-page #pounds-picked .tiles .front {
+    width: 85%;
+    margin: 0 0px 0 -41px;
+  }
+  section#home-page #pounds-picked .tiles .back {
+    display: none;
+    visibility: hidden;
+  }
+  section#upcoming-events h1 {
+    text-align: center;
+    margin: 0 0 0 -55px;
+  }
+  section#upcoming-events h2 {
+    font-size: 1em;
+    margin: 0 0 0 -17px;
+  }
+  section#upcoming-events img {
+    width: 265px;
+  }
+  section#upcoming-events #event-one {
+    padding: 25px 0 60px 35px;
+    text-align: center;
+  }
+  section#upcoming-events #event-one p {
+    margin: 0 0 0 -19px;
+  }
+  section#upcoming-events #event-three {
+    text-align: center;
+  }
+  section#upcoming-events #event-three h2 {
+    margin: 0 0 0 0px;
+  }
+}
+footer #address,
+footer #links {
+  display: none;
+}
+footer #footer-nav {
+  height: 100px;
+}
+footer #footer-nav #social-media p {
+  display: none;
+}
+footer #footer-nav #social-media ul {
+  margin: 12px 30px 0 0;
+}
+footer #footer-nav #social-media ul img {
+  width: 50px;
 }

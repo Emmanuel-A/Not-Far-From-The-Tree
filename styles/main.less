@@ -4,47 +4,79 @@
 *{
 	.box-sizing();
 }
-/*.wrapper{
+body{
+/*	background-image: url(../assets/black-paper.jpg);
+*/
+	background-color:black; 
+	}
+.wrapper{
 	margin: 0 auto;
 	background-color: #fff;
-	width: 65%;
-}*/
+	max-width: 65%;
+	height: 100%;
+}
 .asterisk{
 	color: @red;
 }
-nav{
-	margin: 30px 0 0 0;
-	padding: 20px 0 0 0;
-	border-bottom: 2px solid @red;
+p{
+	font-size: @bodyFontSizeDesk;
+/*	font-weight: lighter;
+*/	font-family: @bodyFontFamily;
+}
+h1, h2{
+	font-family:Times, serif;		
+	font-size: @headingFontSizeDesk;
+}
+/******************************** HEADER/NAV STYLES ******************************/
+#banner{
+	position: absolute;
+	margin:0 0 0 -130px;
+	width: 65%;	
+}
+header{
 	#logo{
 		display: block;
   		background:url(../assets/logo.jpg) no-repeat;
   		text-indent: -9999px;
-  		background-size: 104px;
-		height: 65px;
-		width: 102px;
-		margin: -31px 0 0 0;
+  		background-size: 120px;
+		height: 70px;
+		width: 120px;
+		margin: 55px 0px 0 10px;
 		float: left;		
 	}
+	#donate-btn{ 
+		position: relative;
+		float: right;
+		text-indent: -9999px;
+		background: url(../assets/donate-btn.png) no-repeat;
+		background-size: 75px;
+		height: 100px;
+		width: 80px;
+		margin: 0px 5px 0 0;
+	&:hover{
+		background-size:80px;				
+		cursor: pointer;
+		}
+	}
+}
+nav{
+	margin: -5px 0 0 0;
+	ul li a:hover, a:active{
+		color: #fff;
+	}
 	ul{
+		background-color: @red;
+		top: 0;
 		 li{
 		 	margin: 0 20px 0 20px;
 			list-style-type: none;
 			display: inline-block;
-			padding: 8px 0px;
+			padding: 5px 0px;
 			a{
-				font-size: 0.9em;
+				font-size: @formFontSizeDesk;
 				font-family: @headingFontFamily;
 				text-decoration: none;
 				color: #000;
-				
-			}&:hover{
-					background-color:@red;
-					color: #fff;
-					padding: 5px;
-				}
-				&:active{
-					color: @red;
 				}
 			}
 			li ul {
@@ -56,13 +88,12 @@ nav{
 				display: none;
 				opacity: 0;
 				visibility: hidden;
-				-webkit-transiton: opacity 0.2s;
-				-moz-transition: opacity 0.2s;
+				z-index: 1;
 			}
 			li ul li  { 
-				width: 150px;
+				margin: 0 0px 0 -5px;
 				font-family: @headingFontFamily;
-				font-size: 0.9em;
+				font-size: @bodyFontSizeDesk;
 				text-align: left;
 				padding: 6px;
 			    background: @red; 
@@ -74,57 +105,227 @@ nav{
 				}
 			}
 			li:hover ul {
+				margin: 26px 0 0 0;
 				display: block;
 				opacity: 1;
 				visibility: visible;
 				cursor: pointer;
 			}
 		}
-		#donate-btn{ 
-				background-color: gray;
-				width: 100px;
-				float: right;
-				text-indent: -9999px;
-				background: url(../assets/donate-btn.png) no-repeat;
-				background-size: 75px;
-				height: 100px;
-				width: 80px;
-				float: right;
-				margin: -64px 14px 0 0;
-			&:hover{
-				background-size:80px;				
-				cursor: pointer;
+	}
+
+/******************************** HOME PAGE STYLES ******************************/
+section#home-page{
+	padding: 30px;
+	p{
+		clear: both;
+		&#cta{
+			padding: 30px 0 30px 0;
+		}
+		&#ctaButton a{
+		border-radius: 20px;
+		color: #000;
+		font-family: Times, serif;
+		font-size: headingFontSizeDesk;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin: 25px 63px 0 0px;
+		background-color: @sunflower;
+		padding: 10px;
+		&:hover{
+			background-color:#CEA503;
+			color: #660101;
 			}
 		}
 	}
-	
+	#welcome-message{
+		margin: 220px 0 5px 0;		
+		p{
+			padding: 0 0 10px 0;
+			line-height: 24px;
+		}
+	}
+	h1{
+		font-size: 1.1em;
+		text-align: center;
+		margin: 30px 0 10px 0px;
+	}
+	#pounds-picked{
+		margin: 0 0 0 50px;
+		.tiles{ 
+			position: relative;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			transform-style: preserve-3d;
 
+			-webkit-transition: 0.5s;
+			-moz-transition: 0.5s;
+			transition: 0.5s;
+			margin: 10px 20px ;
+			padding: 0 0 30px 0;
+			float: left;
+			width: 300px;
+			height: 200px;
+			.card{
+				position: absolute;
+				-webkit-backface-visibility: hidden; 
+				-moz-backface-visibility: hidden; 
+			    backface-visibility: hidden; 			
+			}
+			a{
+				text-decoration: none;
+			}
+			p{
+				color: #000;
+				padding: 3px 0 0 0;
+				line-height: normal;
+			}
+			h2{
+				font-size: @headingFontSizeDesk;
+				color: #000;
+				text-transform: uppercase;
+				background-color: @sunflower;
+				padding: 5px;
+				margin: 0px 0 40px 0px;
+			}
+			.red-text{
+				font-style: italic;		
+				font-family: @poundsPickedFont;
+				font-size:@poundsPickedFontSize;
+				color: @red;
+			}
+			.front{
+				z-index: 1;
+				text-align: center;
+				width: 300px;
+				height: 200px;
+				background-color:@clouds;
+			}
+			.back{
+				text-align: center;
+				width: 300px;
+				height: 200px;
+				background-color:@clouds;
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+				p.firstLine{
+				margin: -30px 0 0 0;
+				}
+			}
+		} 
+	}
+}	
+.rotate-3d {  
+    -webkit-transform: rotateY(180deg);  
+    -moz-transform: rotateY(180deg);  
+    transform: rotateY(180deg);  
+} 
+/******************************** EVENTS PAGE STYLES ******************************/
+.fotorama{
+	border-top: 2px solid @red;
+	padding: 20px 0 0 0;
+}
+section#upcoming-events{
+	h1{
+		padding: 20px 0px 0 40px;
+		font-family: @headingFontFamily;
+		font-size: @headingFontSizeDesk;		
+	}
+	h2{
+		padding: 0px 0 13px 0;
+		font-family: @headingFontFamily;
+		font-size: @bodyFontSizeDesk;
+		text-transform: uppercase;		
+	}
+	h3{
+		padding: 3px 0 0 0;
+		right: 0;
+		font-family: @headingFontFamily;
+	}
+	p{
+		font-weight: lighter;		
+		font-family: @bodyFontFamily;
+		font-size: @bodyFontSizeDesk;
+		.date{
+			font-weight: lighter;
+			font-size: @formFontSizeDesk;
+		}
+	}
+	img{
+		float: left;
+		width: 200px;
+		padding: 0 20px 30px 0;
+	}
+	#event-one{
+		padding:25px 0 60px 40px; 
+		border-bottom: 1px solid #ccc;
+	}
+	#event-two{	
+		padding:25px 0 60px 40px; 
+		border-bottom: 2px solid @red;
+	}
+	#event-three{	
+		padding:40px; 
+		height: 400px;
+	}
+}		
+
+/******************************** VOLUNTEER PAGE STYLES ******************************/
 #volunteerInfo{
-	padding: 20px 0;
+	img{
+		width: 66%;
+		margin: 0 0 0 133px;
+		padding: 20px 0 33px 0;
+	}
+	border-top: 2px solid @red;
+	padding: 20px 41px 20px 31px;
+	margin: 100px 0 0 0;
 		h1{
+			font-weight: bold;
 			font-size: @headingFontSizeDesk;
-			padding: 0 0 5px 0;
+			padding: 20px 0 5px 0;
 		}
 	}
 	p{
 		font-size: @bodyFontSizeDesk;
 		padding: 0 0 5px 0;
-		line-height: 16px;
+		line-height: 22px;
 	&#note{
-		font-size: 0.9em;
+		font-size: @bodyFontSizeDesk;
+		font-weight: lighter;
+		width: 425px;	
 	}
 }
 
 #volunteer-form{
 	padding: 20px;
-	background: url(../assets/texture-background.png);
+/*	background-color: @clouds;
+*/	background: url(../assets/texture-background.png);
 /*	width: 65%;
 */	margin: 0 auto;
+}
+.hidden{
+	display: none;
 }
 form{
 	font-family: @bodyFontFamily;
 	font-size: @formFontSizeDesk;
+	#submit{
+		.drop-shadow();
+		color: #000;
+		background-color: @sunflower;
+		border-radius: 30px;
+		width: 100px;
+		border: none;
+		font-size: 1.2em;
+		&:hover{
+			cursor:pointer;
+			background-color:#CEA503;
+		}
+	}
 	input{
+		font-size: 1em;
 /*		margin: 0 0 10px 0;
 */		&#phone_01{
 			text-align: center;
@@ -149,47 +350,385 @@ form{
 			margin: 0 0 0 4px;
 		}
 		&#firstName{
+			width: 180px;
 			height:23px;
-			margin: 0 0 0 4px;
 		}
 		&#lastName{
+			width: 180px;
 			height:23px;
-			margin: 0 0 0 4px;			
 		}
 		&#email{
-			height: 23px;		
+			width: 180px;
+			height: 23px;			
 		}
 		&#streetName{
+			width: 180px;
 			height: 23px;
 		}
 		&#city{
+			width: 180px;
 			height: 23px;
-			margin: 0 0 0 4px;
 		}
 		&#province{
+			width: 180px;
 			height: 23px;
-			margin: 0 0 0 4px;			
 		}
 		&#postalcode{
+			width: 180px;
 			height: 23px;
-			margin: 0 0 0 4px;			
-		}
+		}	
+	}
+	#extensionLbl{
+		padding: 0 0 0 30px;
 	}
 	select{
-		width: 137px;
+		width: 180px;
+		height: 23px;
 	}
-	label{
-		&#last{
-			margin: 0 0px 0 20px;
+	p{
+		padding: 10px 0 5px 1px;
+		font-size: 1.1em;
+	}
+	h1{
+		font-size: 1.2em;
+		font-family: @bodyFontFamily;
+		&#form-title{
+			text-align: center;
+			padding: 0 0 10px 0;
 		}
-		&#extensionLbl{
-			margin: 0 0px 0 20px;
-		}
-		&#provinceLbl{
-			margin: 0 0px 0 20px;
-		}
-		&#countryLbl{
-			margin: 0 0px 0 20px;
+		&#address{
+			margin: 30px 0 0 0;
 		}
 	}
+}
+.hide{
+	display: none;
+}
+
+#testimonials{
+	border-top: 2px solid @red;
+	margin: 100px 0 0 0;
+	h1{
+		color: green;
+		margin: 0 33px;
+		padding: 0 0 11px 0;
+		font-size: 1.8em;
+	}
+	#smith{
+		margin: 0 97px;
+	}
+	img{
+		float: left;
+		padding: 0 15px;
+	}
+	p{
+		padding:0 0px 0 15px;
+		line-height: 2em;
+	}
+	#testimonial-one{
+		padding: 40px;
+	}
+	#testimonial-two{
+		padding: 40px;
+		background-color: @clouds;
+	}
+}
+/******************************** FOOTER STYLES ******************************/
+footer{	
+	padding: 100px 0 0 0;
+	clear: both;
+	font-family: Helvetica, arial;
+	font-size: @formFontSizeDesk;
+	#footer-nav{
+		padding: 11px 0 10px 31px;
+		background-color:@red; 
+		ul{
+			li{
+				display: inline-block;
+				a{
+					font-size: @formFontSizeDesk;
+					text-decoration: none;
+					color: #fff;
+					&:hover{
+						color:#000;
+					}
+				}
+			}
+		}
+		#social-media{
+			float: right;
+		ul{
+			margin: -31px 0 0 67px;
+			img{
+					width: 34px;
+					margin: 0 0 0 -10px;
+				}
+			}
+		}
+		p{
+			font-style: italic;
+			margin: -14px 0 0 0;
+			padding: 0 200px 0 0;
+			font-size: @formFontSizeDesk;	
+			color: #fff;
+		}
+	}
+	#address{
+		padding: 15px 0 0 10px;
+		p#copyright{
+			float: right;
+			margin: -26px 10px 0 0;
+		}
+	}
+}
+
+/*Tablet Media Query*/
+@media only screen and (max-width: 1024px) {
+	p{
+		font-size: @tabletBodyFontSize;
+	}
+	.wrapper{
+		max-width: 100%;
+	}
+	nav{
+		#home-logo{
+			visibility: visible;
+		}
+		#logo{
+			margin: 21px 0px 0 55px;
+		}
+		ul li ul{
+			position: static;
+			z-index: 2;
+			text-align: center;
+		}
+		ul{
+			text-align: center;
+			margin: 105px 0 0 0;
+			li a{
+				text-align: center;
+				font-size: 1.3em;
+			}
+		}
+		#donate-btn{
+			margin: -141px 55px 0 0;
+			width: 90px;
+			height: 110px;
+			background-size: 83px;
+		}
+		#banner{
+			width: 100%;
+			margin: 0;
+		}
+	}
+	section{
+		&#home-page{
+			margin: 35px 0 0 0;
+			#pounds-picked{
+				margin: 0 0 0 14%;
+			}
+			h1{
+				font-size: 1.5em;
+			}
+			#pounds-picked{
+				.tiles{
+					height: 260px;
+					.front{
+						height: 230px;
+					}
+					.back{
+						height: 246px;
+					}
+				}
+			} 
+		}
+		#welcome-message{
+		}
+		&#upcoming-events{
+			img{
+				width: 240px;
+			}
+			p .date{
+				font-size: 1em;
+			}
+			h1{
+				font-size: 1.1em;
+			}
+			h2{
+				font-size: 1.1em;
+			}
+		}
+	}
+	#gallery{
+		margin:-125px 0 0 0;
+	}
+	.fotorama{
+		border: none;
+	}
+	#volunteer-form{
+		text-align: center;
+		input{
+			margin: 0 5px 10px 10px;
+		}
+		input#province, input#firstName, input#lastName, input#streetName, input#city, input#postalcode, input#email, input#submit, select{
+			width: 250px;
+			height: 30px;
+		}
+		input#phone_01, input#phone_02, input#phone_03, input#extension{
+			height: 30px;
+		}
+		input#radio, input#checkbox{
+			font-size: 2em;
+		}
+		h1#form-title{
+			padding: 0 0 40px 0;
+		}
+	}
+	#volunteerInfo{
+		border: none;
+		margin: 0px;
+		h1{
+			font-size: 1.1em;
+		}
+	}
+	#testimonials{
+		border: none;
+		margin: 0;
+	}
+	footer{
+		#address{
+			padding: 15px 34px 0 34px;
+			p{
+				font-size: 1.2em;
+			}
+		}
+		#footer-nav{
+			ul{
+				li a{
+					font-size:1.2em;
+					padding: 5px;
+				}
+			}
+			p{
+				font-size: 1em;
+			}
+			#social-media{
+				ul{
+					padding: 0 10px;
+					margin: -38px 30px 0 67px;
+					img{
+						width: 45px;
+						margin: 0 0 0 -16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*Phone Media Query*/
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+	.wrapper{
+		margin: 0 auto;
+	}
+	nav{
+    ul {	
+	    li a{
+	    width: 100%;
+	    &:hover{
+	      cursor:none;
+        }
+      }
+    }
+  }
+
+	#testimonials{
+		#testimonial-one, #testimonial-two{
+			padding: 20px 20px 0 20px;
+		}
+		#smith{
+			margin: 0 60px;
+		}
+		img{
+			width: 100%;
+			padding: 0 15px 16px 15px;
+		}
+		p{
+			font-size: 0.8em;
+			line-height: 1.9em;
+			padding: 0;
+		}
+	}
+	section{
+		&#home-page{
+			margin: -120px 0 0 0;
+			padding: 0 13px 0 15px;
+			h1{
+				font-size: 1.1em;
+				width: 61%;
+				margin: 0 auto;
+			}
+			p#ctaButton a{
+				text-align: center;
+			}
+			#pounds-picked{
+				.tiles{
+					.front{
+						width: 85%;
+						margin: 0 0px 0 -41px;
+					}
+					.back{
+						display: none;
+						visibility: hidden;
+					}
+				}
+			} 
+		}
+		&#upcoming-events{
+			h1{
+				text-align: center;
+				margin: 0 0 0 -55px;
+			}
+			h2{
+					font-size: 1em;
+					margin: 0 0 0 -17px;
+				} 
+			img{
+				width: 265px;
+			   }
+			#event-one{
+				padding: 25px 0 60px 35px;
+				text-align: center;
+				p{
+					margin: 0 0 0 -19px;
+				}
+				
+			} 
+			#event-three{
+				text-align: center;
+				h2{
+					margin: 0 0 0 0px;
+				}
+			}  
+		}
+	}
+}
+footer{
+	#address, #links{
+		display: none;
+	}
+	#footer-nav{
+		height: 100px;
+		#social-media{
+			p{
+				display: none;
+			}
+		}
+	}
+}
+footer #footer-nav #social-media ul{
+	margin: 12px 30px 0 0;
+}
+footer #footer-nav #social-media ul img{
+	width: 50px;
 }
