@@ -67,13 +67,14 @@ header #donate-btn:hover {
   cursor: pointer;
 }
 nav {
-  margin: -10px 0 0 0;
+  margin: -5px 0 0 0;
 }
 nav ul li a:hover,
 nav a:active {
   color: #fff;
 }
 nav ul {
+  text-align: center;
   background-color: #ed1b24;
   top: 0;
 }
@@ -147,7 +148,7 @@ section#home-page p#ctaButton a:hover {
   color: #660101;
 }
 section#home-page #welcome-message {
-  margin: 220px 0 5px 0;
+  margin: 245px 0 5px 0;
 }
 section#home-page #welcome-message p {
   padding: 0 0 10px 0;
@@ -335,20 +336,12 @@ form input {
 */
 }
 form input#phone_01 {
-  text-align: center;
-  width: 50px;
+  width: 180px;
   height: 23px;
 }
 form input#phone_02 {
-  text-align: center;
-  width: 50px;
+  width: 180px;
   height: 23px;
-}
-form input#phone_03 {
-  text-align: center;
-  width: 60px;
-  height: 23px;
-  padding: 0 0 0 20px;
 }
 form input#extension {
   text-align: center;
@@ -436,6 +429,17 @@ form h1#address {
 #testimonials #testimonial-two {
   padding: 40px;
   background-color: #ecf0f1;
+}
+/******************************** FOOTER STYLES ******************************/
+#volunteerForm {
+  padding: 130px 0 0 30px;
+  font-size: 1.1em;
+}
+#volunteerForm h2 {
+  color: #ed1b24;
+}
+#volunteerForm h1 {
+  padding: 9px 0 0 0;
 }
 /******************************** FOOTER STYLES ******************************/
 footer {
@@ -598,35 +602,6 @@ footer #address p#copyright {
     border: none;
     margin: 0;
   }
-  /*footer{
-  		#address{
-  			padding: 15px 34px 0 34px;
-  			p{
-  				font-size: 1.2em;
-  			}
-  		}
-  		#footer-nav{
-  			ul{
-  				li a{
-  					font-size:1.2em;
-  					padding: 5px;
-  				}
-  			}
-  			p{
-  				font-size: 1em;
-  			}
-  			#social-media{
-  				ul{
-  					padding: 0 10px;
-  					margin: -38px 30px 0 67px;
-  					img{
-  						width: 45px;
-  						margin: 0 0 0 -16px;
-  					}
-  				}
-  			}
-  		}
-  	}*/
 }
 /*Phone Media Query*/
 @media only screen and (max-width: 600px) and (min-width: 320px) {
@@ -729,23 +704,3 @@ footer #address p#copyright {
     margin: 0 0 0 0px;
   }
 }
-/*
-footer{
-	#address, #links{
-		visibility: hidden;
-	}
-	#footer-nav{
-		height: 110px;
-		#social-media{
-			p{
-				display: none;
-			}
-		}
-	}
-}
-footer #footer-nav #social-media ul{
-	margin: 12px 30px 0 0;
-}
-footer #footer-nav #social-media ul img{
-	width: 50px;
-}*/

@@ -67,11 +67,12 @@ header{
 	}
 }
 nav{
-	margin: -10px 0 0 0;
+	margin: -5px 0 0 0;
 	ul li a:hover, a:active{
 		color: #fff;
 	}
 	ul{
+		text-align: center;
 		background-color: @red;
 		top: 0;
 		 li{
@@ -146,7 +147,7 @@ section#home-page{
 		}
 	}
 	#welcome-message{
-		margin: 220px 0 5px 0;		
+		margin: 245px 0 5px 0;		
 		p{
 			padding: 0 0 10px 0;
 			line-height: 24px;
@@ -335,23 +336,15 @@ form{
 		font-size: 1em;
 /*		margin: 0 0 10px 0;
 */		&#phone_01{
-			text-align: center;
-			width: 50px;
+			width: 180px;
 			height:23px;
 		}
 		&#phone_02{
-			text-align: center;	
-			width: 50px;
+			width: 180px;
 			height:23px;
-		}
-		&#phone_03{
-			text-align: center;		
-			width: 60px;
-			height:23px;
-			padding: 0 0 0 20px;
 		}
 		&#extension{
-			text-align: center;		
+			text-align: center;
 			width: 60px;
 			height:23px;
 			margin: 0 0 0 4px;
@@ -440,6 +433,20 @@ form{
 		background-color: @clouds;
 	}
 }
+
+/******************************** FOOTER STYLES ******************************/
+#volunteerForm{
+	padding: 130px 0 0 30px;
+	font-size: 1.1em;
+	h2{
+		color: @red;
+	}
+	h1{
+		padding: 9px 0 0 0;
+	}
+
+}
+
 /******************************** FOOTER STYLES ******************************/
 footer{	
 	padding: 200px 0 0 0;
@@ -604,35 +611,6 @@ footer{
 		border: none;
 		margin: 0;
 	}
-	/*footer{
-		#address{
-			padding: 15px 34px 0 34px;
-			p{
-				font-size: 1.2em;
-			}
-		}
-		#footer-nav{
-			ul{
-				li a{
-					font-size:1.2em;
-					padding: 5px;
-				}
-			}
-			p{
-				font-size: 1em;
-			}
-			#social-media{
-				ul{
-					padding: 0 10px;
-					margin: -38px 30px 0 67px;
-					img{
-						width: 45px;
-						margin: 0 0 0 -16px;
-					}
-				}
-			}
-		}
-	}*/
 }
 
 /*Phone Media Query*/
@@ -753,23 +731,3 @@ footer{
 		}
 	}
 }
-/*
-footer{
-	#address, #links{
-		visibility: hidden;
-	}
-	#footer-nav{
-		height: 110px;
-		#social-media{
-			p{
-				display: none;
-			}
-		}
-	}
-}
-footer #footer-nav #social-media ul{
-	margin: 12px 30px 0 0;
-}
-footer #footer-nav #social-media ul img{
-	width: 50px;
-}*/

@@ -1,64 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Become a volunteer</title>
-		<meta charset="utf-8"/> 
-		<meta content="Not Far From The Tree Website Redesign" name="Emmanuel Amponsah"/> 
+<?php include("includes/head.php");?>
 
-		<link rel="shortcut icon" href="/chuystucson.com/images/chuys.gifimages/favicon.gif" type="image/gif" src="assets/logo.jpg"/>
-
-  		<link rel="stylesheet" href="styles/css/reset.css" type="text/css" media="screen" />
-  		<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />
-  		<!-- Fonts -->
-  		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,400' rel='stylesheet' type='text/css'>	
-  		<link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-  		<link href='http://fonts.googleapis.com/css?family=Exo+2:600italic' rel='stylesheet' type='text/css'>
-
-  		<script>
- 		$(document).ready(function(){
-	    $(".menubutton").click(function(){
-	    $("nav").slideToggle();
-	    });
-	  });
-  	</script>
-	</head>
-
-	<body>
-	<div class="wrapper">		
-	<header>	
-		<div class="menubutton"><img src="assets/menu.svg"></div>
-		<p><a href="" id="donate-btn">Donate now</a></p>
-		<nav>
-			<p><a href="index.html" id="logo">NotFarFromTheTree</a></p>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">About</a>
-					<ul>
-						<li><a href="#">What We Do</a></li>
-						<li><a href="#">Who We Are</a></li>
-						<li><a href="#">History</a></li>
-						<li><a href="#">Awards</a></li>
-					</ul>	
-				</li>
-				<li>
-					<a href="#">Blog</a>
-					<ul>
-						<li><a href="#">Photos</a></li>
-						<li><a href="#">Videos</a></li>
-					</ul>
-				</li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="#">Get Involved</a>
-					<ul>
-						<li><a href="#">Register Your Tree</a></li>	
-						<li><a href="volunteer.html">Volunteer</a></li>
-						<li><a href="#">Donate</a></li>
-					</ul>
-				</li>
-				<li><a href="testimonials.html">Testimonials</a></li>
-			</ul>
-		</nav>
-	</header>
+<body>
+	<div class="wrapper">	
+		<?php include("includes/nav.php");?>
 
 		<div id="volunteerInfo">
 			<p>Volunteers are vital to the success of Not Far From The Tree’s programs. Each year, hundreds of amazing folks contribute their skills, energy and passion to help out in the field, at community events, and behind the scenes.</p>
@@ -67,7 +11,7 @@
 			<p>If you'd like to lend a hand with Not Far From The Tree's programs, please fill out this form. We'll keep you up to date on all of the latest volunteer opportunities.</p>
 		</div>
 		
-		<form name="volunteer-form" id="volunteer-form">
+		<form action="submit.php" method="post" name="volunteer-form" id="volunteer-form">
 		  <h1 id="form-title">Volunteer Registration Form</h1>
 		  <h1 id="name">Name</h1>
 		  <p id="first">First<span class="asterisk">*</span>:</p><input type="text" name="firstName" id="firstName"/>
@@ -75,9 +19,10 @@
 		  
 		  <p>Email<span class="asterisk">*</span>:</p><input type="text" name="email" id="email"/><br/><br/>
 
-		  <p>Phone (Primary):</p><input type="text" name="phone_01" id="phone_01" maxlength="3" valuesize="3"/> - <input type="phone" name="phone_02" id="phone_02" maxlength="3" valuesize="3"/> - <input type="text" name="phone_03" id="phone_03" maxlength="3" valuesize="3"/>
+		  <p>Phone (Primary):</p><input type="text" name="phone_01" id="phone_01" maxlength="10" valuesize="10"/>  
 		  <label id="extensionLbl">Extension:</label><input type="text" name="extension" id="extension" maxlength="4" valuesize="4"><br/><br/>
-		  <p>Phone (Secondary):</p><input type="text" name="phone_01" id="phone_01" maxlength="3" valuesize="3"/> - <input type="phone" name="phone_02" id="phone_02" maxlength="3" valuesize="3"/> - <input type="text" name="phone_03" id="phone_03" maxlength="3" valuesize="3"/>
+		  
+		  <p>Phone (Secondary):</p><input type="text" name="phone_02" id="phone_02" maxlength="10" valuesize="10"/>
 		  <label id="extensionLbl">Extension:</label><input type="text" name="extension" id="extension" maxlength="4" valuesize="4"><br/><br/>
 
 		  <h1 id="address">Address</h1>
@@ -100,8 +45,8 @@
 		  </select> <br/><br/>
 
 		  <p>Would you like to receive our newsletter?</p>
-		  <input type="radio" name="student" value="yes">yes
-		  <input type="radio" name="student" value="no">no<br/><br/>
+		  <input type="radio" name="newsletter" value="yes">yes
+		  <input type="radio" name="newsletter" value="no">no<br/><br/>
 		  
 		  <p>Ways to get involved<span class="asterisk">*</span>:</p>
 		  <input type="checkbox" name="involvement" value="pickFruits" class="modeClass">Picking fruit<br/>
@@ -184,36 +129,7 @@
 
 		  <input type="submit" name="submit" value="submit" id="submit">
 		</form>
+</body>
+		      <?php include("includes/footer.php");?>
 
-		<footer>
-			<div id="footer-nav">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="">About</a></li>		
-					<li><a href="">Blog</a></li>
-					<li><a href="events.html">Events</a></li>	
-					<li><a href="">Get Involved</a></li>
-					<li><a href="">Testimonials</a></li>								
-				</ul>
-				<div id="social-media">
-					<p>Follow us:</p>
-					<ul>
-						<li><a href=""><img src="assets/facebook-logo.png"></a></li>
-						<li><a href=""><img src="assets/twitter-logo.png"></a></li>
-						<li><a href=""><img src="assets/youtube-logo.png"></a></li>
-						<li><a href=""><img src="assets/flickr-logo.png"></a></li>
-						<li><a href=""><img src="assets/rss-logo.png"></a></li>
-					</ul>
-				</div>
-			</div>
 
-			<div id="address">
-				<p>401 Richmond St. W., Suite 365</p>
-				<p>Toronto, ON</p>
-				<p>M5V 3A8</p>
-				<p id="copyright">© 2013 Not Far From The Tree</p>
-			</div>
-		</footer>
-	</div>
-	</body>
-</html>
